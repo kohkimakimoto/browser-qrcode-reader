@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Head from "next/head";
 import jsQR from "jsqr";
 import { Modal } from "../components/modal";
 import { useInterval } from "../hooks/useInterval";
@@ -60,24 +59,18 @@ export default function Index() {
   };
 
   return (
-    <>
-      <Head>
-        <title>Browser QRcode Reader</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="bg-white">
-        <video
-          id="video-area"
-          ref={videoRef}
-          className="min-h-full min-w-full fixed right-0 bottom-0"
-          autoPlay
-          playsInline
-        ></video>
-        <div className="hidden">
-          <canvas id="canvas-area" ref={canvasRef}></canvas>
-        </div>
-        <Modal shown={modalShown} onClose={handleCloseModle} data={data} />
+    <div className="bg-white">
+      <video
+        id="video-area"
+        ref={videoRef}
+        className="min-h-full min-w-full fixed right-0 bottom-0"
+        autoPlay
+        playsInline
+      ></video>
+      <div className="hidden">
+        <canvas id="canvas-area" ref={canvasRef}></canvas>
       </div>
-    </>
+      <Modal shown={modalShown} onClose={handleCloseModle} data={data} />
+    </div>
   );
 }
