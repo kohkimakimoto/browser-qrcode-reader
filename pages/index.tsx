@@ -76,14 +76,6 @@ export default function Index() {
         <div className="hidden">
           <canvas id="canvas-area" ref={canvasRef}></canvas>
         </div>
-        <div className="w-full fixed top-0 flex text-center">
-          <div
-            className="m-auto my-2 p-2 px-4 bg-gray-600 items-center text-indigo-100 leading-none rounded-full inline-flex"
-            role="alert"
-          >
-            <span className="text-center flex-auto">Scan QR code</span>
-          </div>
-        </div>
         <Modal shown={modalShown} onClose={handleCloseModle} data={data} />
       </div>
     </>
