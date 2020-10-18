@@ -7,7 +7,7 @@ export type PropsType = {
 };
 
 export const Modal: React.FC<PropsType> = (props: PropsType) => {
-  const { shown, onClose, children, data } = props;
+  const { shown, onClose, data } = props;
 
   const handleClose = () => {
     onClose();
