@@ -22,7 +22,7 @@ export default function Index() {
           audio: false,
           video: {
             facingMode: {
-              //exact: 'environment',
+              exact: 'environment',
             },
           },
         });
